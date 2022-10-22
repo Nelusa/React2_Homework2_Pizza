@@ -5,7 +5,11 @@ import './style.css';
 const Topping = ({ topping, onSelected }) => {
   return (
     <div className="topping">
-      <Check checked={topping.selected} onChange={onSelected} />
+      <Check
+        checked={topping.selected}
+        onChange={onSelected}
+        topping={topping}
+      />
       <span className="topping__content">
         {topping.name}: {topping.price} €
       </span>
